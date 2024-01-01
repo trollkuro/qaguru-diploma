@@ -3,16 +3,15 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
     private SelenideElement searchInput = $(".search-form__input"),
                             courseLanguageDropDown = $("#ember38_tb"),
-                            certificateCheckBox = $(""),
-                            freeCheckBox = $(""),
-                            searchButton = $("");
+                            certificateCheckBox = $x("//span[text()='С сертификатами']"),
+                            freeCheckBox = $x("//span[text()='Бесплатные']"),
+                            searchButton = $(".search-form__submit");
 
     //todo define selectors for the elements
 
