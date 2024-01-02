@@ -1,4 +1,5 @@
 package tests;
 
-public class HeaderTests {
+public class HeaderTests extends TestBase {
+
 }

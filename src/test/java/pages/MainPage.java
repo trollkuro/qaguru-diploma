@@ -9,11 +9,13 @@ public class MainPage {
 
     private SelenideElement searchInput = $(".search-form__input"),
                             courseLanguageDropDown = $("#ember38_tb"),
+                            engLanguageOption = $("#ember48"),
+                            ruLanguageOption = $("#ember46"),
+                            anyLanguageOption = $("#ember44"),
                             certificateCheckBox = $x("//span[text()='С сертификатами']"),
                             freeCheckBox = $x("//span[text()='Бесплатные']"),
                             searchButton = $(".search-form__submit");
 
-    //todo define selectors for the elements
 
     public MainPage checkSearchInput(){
         searchInput.shouldBe(visible);
@@ -60,10 +62,27 @@ public class MainPage {
         return page(SearchPage.class);
     }
 
-    public MainPage selectCourseLanguage(String language){
-        courseLanguageDropDown.selectOption(language);
+    public MainPage selectEngCourseLanguage(){
+        courseLanguageDropDown.click();
+        engLanguageOption.click();
         return this;
     }
+
+    public MainPage selectRuCourseLanguage(){
+        courseLanguageDropDown.click();
+        ruLanguageOption.click();
+        return this;
+    }
+
+    public MainPage selectAnyCourseLanguage(){
+        courseLanguageDropDown.click();
+        anyLanguageOption.click();
+        return this;
+    }
+
+
+
+
 
 
 }
