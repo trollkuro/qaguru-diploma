@@ -8,13 +8,13 @@ version = '1.0-SNAPSHOT'
 
 allure {
     report {
-        version.set("2.19.0")
+        version.set('2.19.0')
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("2.19.0")
+                adapterVersion.set('2.19.0')
             }
         }
     }
@@ -50,14 +50,14 @@ tasks.withType(Test){
     }
 }
 
-/* task user_creation_test(type: Test) {
+task header_tests(type: Test) {
     useJUnitPlatform{
-        includeTags("user_creation")
+        includeTags("Header")
     }
 }
 
-task successful_test(type: Test) {
+task search_tests(type: Test) {
     useJUnitPlatform{
-        includeTags("successful_test")
+        includeTags("Search")
     }
-} */
+}
