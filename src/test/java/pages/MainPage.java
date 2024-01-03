@@ -3,15 +3,16 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
     private SelenideElement searchInput = $(".search-form__input"),
-                            courseLanguageDropDown = $("#ember38_tb"),
-                            engLanguageOption = $("#ember48"),
-                            ruLanguageOption = $("#ember46"),
-                            anyLanguageOption = $("#ember44"),
+                            courseLanguageDropDown = $(".select-box__toggle-btn"),
+                            engLanguageOption = $(withText("На английском")),
+                            ruLanguageOption = $(withText("На русском")),
+                            anyLanguageOption = $(withText("На любом языке")),
                             certificateCheckBox = $x("//span[text()='С сертификатами']"),
                             freeCheckBox = $x("//span[text()='Бесплатные']"),
                             searchButton = $(".search-form__submit");

@@ -26,7 +26,4 @@ public class SearchPage {
         courseCardTitle.shouldHave(text(title));
         return this;
     }
-
-
-    //todo
 }

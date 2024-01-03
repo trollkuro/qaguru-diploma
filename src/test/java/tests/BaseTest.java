@@ -9,14 +9,14 @@ import org.junit.jupiter.api.BeforeAll;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class TestBase {
+public class BaseTest {
 
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://stepik.org/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        //Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = true;
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 

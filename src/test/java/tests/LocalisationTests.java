@@ -16,19 +16,19 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Header")
-public class HeaderTests extends TestBase {
+public class LocalisationTests extends BaseTest {
 
     private Header header = new Header();
 
 
-    static Stream<Arguments> availableLanguges(){
+    static Stream<Arguments> availableLanguages(){
         return Stream.of(
                 Arguments.of(List.of("Беларуская", "Deutsch", "English", "Español",
                         "Português", "Русский", "Українська", "简体中文"
                 ))
         );
     }
-    @MethodSource("availableLanguges")
+    @MethodSource("availableLanguages")
     @Tag("Header")
     @ParameterizedTest
     @Feature("SystemLanguage")
@@ -44,5 +44,4 @@ public class HeaderTests extends TestBase {
             header.checkAvailableLanguages(expectedLanguages);
         });
     }
-
 }

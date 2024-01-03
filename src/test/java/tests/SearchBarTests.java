@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Search bar")
-public class MainPageTests extends TestBase {
+public class SearchBarTests extends BaseTest {
 
     private MainPage mainPage = new MainPage();
     private SearchPage searchPage = new SearchPage();
