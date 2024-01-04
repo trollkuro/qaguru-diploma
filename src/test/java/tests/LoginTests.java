@@ -12,10 +12,12 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@DisplayName("AuthModalWindow")
 public class LoginTests extends BaseTest{
 
     private Header header = new Header();
     private AuthModalWindow authModalWindow = new AuthModalWindow();
+
 
     @Test
     @Tag("Login")

@@ -16,7 +16,7 @@ public class BaseTest {
         Configuration.baseUrl = "https://stepik.org/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 

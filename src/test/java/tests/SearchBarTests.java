@@ -22,10 +22,8 @@ public class SearchBarTests extends BaseTest {
     private static final String FREE_RU_SEARCH_VALUE = "Английский. A1 уровень";
 
 
-
-
     @Test
-    @Tag("Search")
+    @Tag("Search bar on main page")
     @Feature("Search")
     @Owner("kegorova")
     @DisplayName("Search bar is displayed on main page")
