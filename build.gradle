@@ -31,7 +31,8 @@ dependencies {
             'org.slf4j:slf4j-api:2.0.9',
             'com.codeborne:selenide:6.16.0',
             'org.junit.jupiter:junit-jupiter:5.9.3',
-            'io.qameta.allure:allure-selenide:2.19.0'
+            'io.qameta.allure:allure-selenide:2.19.0',
+            'org.aeonbits.owner:owner:1.0.12'
     )
 }
 
@@ -50,10 +51,10 @@ tasks.withType(Test){
     }
 }
 
-/*
-task header_tests(type: Test) {
+
+task auth_modal_tests(type: Test) {
     useJUnitPlatform{
-        includeTags("Header")
+        includeTags("AuthModalWindow")
     }
 }
 
@@ -62,4 +63,9 @@ task search_tests(type: Test) {
         includeTags("Search")
     }
 }
-*/
+
+task localisation_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags("Translations")
+    }
+}

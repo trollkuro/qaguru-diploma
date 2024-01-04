@@ -1,6 +1,6 @@
 package tests;
 
-import components.Header;
+import pages.components.Header;
 import data.Languages;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;

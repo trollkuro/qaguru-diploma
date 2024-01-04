@@ -1,7 +1,7 @@
 package tests;
 
-import components.AuthModalWindow;
-import components.Header;
+import pages.components.AuthModalWindow;
+import pages.components.Header;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -20,7 +20,7 @@ public class LoginTests extends BaseTest{
 
 
     @Test
-    @Tag("Login")
+    @Tag("AuthModalWindow")
     @Feature("User login")
     @Owner("kegorova")
     @DisplayName("Verify login elements are returned in the modal window")
@@ -37,7 +37,7 @@ public class LoginTests extends BaseTest{
     }
 
     @Test
-    @Tag("Login")
+    @Tag("AuthModalWindow")
     @Feature("User login")
     @Owner("kegorova")
     @DisplayName("Verify registration elements are returned in the modal window")
@@ -54,7 +54,7 @@ public class LoginTests extends BaseTest{
     }
 
     @Test
-    @Tag("Login")
+    @Tag("AuthModalWindow")
     @Feature("User login")
     @Owner("kegorova")
     @DisplayName("Auth modal window is closed by x-icon")

@@ -1,18 +1,17 @@
-package components;
+package pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class AuthModalWindow {
 
     private SelenideElement modalWindow = $(".modal-dialog-inner"),
                             closeModalIcon = $(".modal-dialog-top__close"),
-                            loginButton = $(withText("Войти")),
-                            registerButton = $(withText("Зарегистрироваться")),
+                            loginButton = $("#login_form .sign-form__btn"),
+                            registerButton = $("#registration_form .sign-form__btn"),
                             fullnameInput = $("#id_registration_full-name"),
                             emailInput = $("#id_login_email"),
                             registrationEmailInput = $("#id_registration_email"),

@@ -1,4 +1,4 @@
-package components;
+package pages.components;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;

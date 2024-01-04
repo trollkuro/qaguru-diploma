@@ -2,8 +2,10 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import configs.WebBrowserConfig;
 import helpers.AllureAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
@@ -13,10 +15,15 @@ public class BaseTest {
 
     @BeforeAll
     static void beforeAll() {
+        WebBrowserConfig webBrowserConfig = ConfigFactory.create(WebBrowserConfig.class, System.getProperties());
         Configuration.baseUrl = "https://stepik.org/";
-        Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        //Configuration.holdBrowserOpen = true;
+        Configuration.browser = webBrowserConfig.browserName();
+        Configuration.browserVersion = webBrowserConfig.browserVersion();
+        Configuration.browserSize = webBrowserConfig.browserSize();
+        if(webBrowserConfig.isRemote()){
+            Configuration.remote = webBrowserConfig.remoteURL();
+        }
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
@@ -26,7 +33,7 @@ public class BaseTest {
         AllureAttachments.screenshotAs("Last screenshot");
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
-        //AllureAttachments.addVideo();
+        AllureAttachments.addVideo();
         closeWebDriver();
     }
 }

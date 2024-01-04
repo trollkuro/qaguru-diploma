@@ -23,7 +23,7 @@ public class SearchBarTests extends BaseTest {
 
 
     @Test
-    @Tag("Search bar on main page")
+    @Tag("SearchBar")
     @Feature("Search")
     @Owner("kegorova")
     @DisplayName("Search bar is displayed on main page")
@@ -41,7 +41,7 @@ public class SearchBarTests extends BaseTest {
     }
 
     @Test
-    @Tag("Search")
+    @Tag("SearchBar")
     @Feature("Search")
     @Owner("kegorova")
     @DisplayName("Search for free course without specified language")
@@ -61,7 +61,7 @@ public class SearchBarTests extends BaseTest {
     }
 
     @Test
-    @Tag("Search")
+    @Tag("SearchBar")
     @Feature("Search")
     @Owner("kegorova")
     @DisplayName("Search for course with payment without specified language")
@@ -78,7 +78,7 @@ public class SearchBarTests extends BaseTest {
     }
 
     @Test
-    @Tag("Search")
+    @Tag("SearchBar")
     @Feature("Search")
     @Owner("kegorova")
     @DisplayName("Search for free course with language = English")
@@ -104,7 +104,7 @@ public class SearchBarTests extends BaseTest {
     }
 
     @Test
-    @Tag("Search")
+    @Tag("SearchBar")
     @Feature("Search")
     @Owner("kegorova")
     @DisplayName("Search for free course with language = Russian")
