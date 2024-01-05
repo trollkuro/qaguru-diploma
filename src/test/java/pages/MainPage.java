@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -18,7 +19,10 @@ public class MainPage {
                             searchButton = $(".search-form__submit");
 
 
-    public MainPage checkSearchInput(){
+    public MainPage openPage(){
+        open(baseUrl);
+        return this;
+    }public MainPage checkSearchInput(){
         searchInput.shouldBe(visible);
         return this;
     }

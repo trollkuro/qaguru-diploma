@@ -1,5 +1,6 @@
 package tests;
 
+import pages.MainPage;
 import pages.components.Header;
 import data.Languages;
 import io.qameta.allure.Feature;
@@ -13,14 +14,13 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Localisation")
 public class LocalisationTests extends BaseTest {
 
     private Header header = new Header();
+    private MainPage mainPage = new MainPage();
 
     private static final List<String> LANGUAGES = List.of("Беларуская", "Deutsch", "English", "Español",
             "Português", "Русский", "Українська", "简体中文");
@@ -45,7 +45,7 @@ public class LocalisationTests extends BaseTest {
     @DisplayName("Check list of available languages in the language selector")
     void availableLanguagesTest(List<String> expectedLanguages){
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Click on the language selector", () -> {
             header.clickOnLanguageDropDown();
@@ -76,7 +76,7 @@ public class LocalisationTests extends BaseTest {
     @DisplayName("Check auth buttons translations according to selected language")
     void navigationLinksTranslationTest(Languages languages, List<String> expectedAuthButtons) {
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Click on the language selector", () -> {
             header.clickOnLanguageDropDown();

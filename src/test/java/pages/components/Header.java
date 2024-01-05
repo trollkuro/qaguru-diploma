@@ -24,7 +24,6 @@ public class Header {
         return this;
     }
 
-
     public Header checkAvailableLanguages(List<String> Languages){
         listOfLanguages.shouldHave(CollectionCondition.texts(Languages));
         return this;

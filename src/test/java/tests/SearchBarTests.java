@@ -8,8 +8,6 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchPage;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Search bar")
@@ -29,7 +27,7 @@ public class SearchBarTests extends BaseTest {
     @DisplayName("Search bar is displayed on main page")
     void SearchBarIsDisplayedTest(){
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Verify search bar elements in the main page", () -> {
             mainPage.checkSearchInput()
@@ -47,7 +45,7 @@ public class SearchBarTests extends BaseTest {
     @DisplayName("Search for free course without specified language")
     void SearchFreeCourseAnyLanguageTest(){
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Select free course checkbox", () -> {
             mainPage.selectFreeCheckBox();
@@ -67,7 +65,7 @@ public class SearchBarTests extends BaseTest {
     @DisplayName("Search for course with payment without specified language")
     void SearchPaidCourseAnyLanguageTest(){
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Click on the search button", () -> {
             mainPage.clickSearchButton();
@@ -84,7 +82,7 @@ public class SearchBarTests extends BaseTest {
     @DisplayName("Search for free course with language = English")
     void SearchFreeCourseEnglishLanguageTest(){
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Select free course checkbox", () -> {
             mainPage.selectFreeCheckBox();
@@ -110,7 +108,7 @@ public class SearchBarTests extends BaseTest {
     @DisplayName("Search for free course with language = Russian")
     void SearchFreeCourseRussianLanguageTest(){
         step("Open main page", () -> {
-            open(baseUrl);
+            mainPage.openPage();
         });
         step("Select free course checkbox", () -> {
             mainPage.selectFreeCheckBox();

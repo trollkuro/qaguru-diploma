@@ -17,5 +17,5 @@ settings.gradle
 /gradle/
 
 ### Test class for tests development ###
-/src/test/java/tests/ExampleTests.java
 /src/test/java/tests/DraftTests.java
+/notifications/allure-notifications-4.6.1.jar

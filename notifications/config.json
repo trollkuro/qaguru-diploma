@@ -1,0 +1,18 @@
+{
+  "base": {
+    "logo": "",
+    "project": "qa.guru.diploma.UI.Tests",
+    "environment": "PROD",
+    "comment": "UI Tests",
+    "reportLink": "https://qa.guru/",
+    "language": "en",
+    "allureFolder": "allure-report",
+    "enableChart": true,
+    "durationFormat": "HH:mm:ss.SSS"
+  },
+  "telegram": {
+    "token": "6763712816:AAHJO3xS4wEdfw3vETm7gviKqidBzyKmEqM",
+    "chat": "-1002037983134",
+    "replyTo": ""
+  }
+}

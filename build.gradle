@@ -69,3 +69,8 @@ task localisation_tests(type: Test) {
         includeTags("Translations")
     }
 }
+
+task all_tests(type: Test) {
+    useJUnitPlatform{
+    }
+}

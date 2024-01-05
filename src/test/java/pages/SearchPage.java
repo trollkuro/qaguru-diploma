@@ -12,6 +12,7 @@ public class SearchPage {
                             paidCourseLabel = $(".format-price [data-type=currency]"),
                             courseCardTitle = $(".course-card__title");
 
+
     public SearchPage courseIsFree(){
         freeCourseLabel.shouldBe(visible);
         return this;
