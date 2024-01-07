@@ -45,6 +45,7 @@ The project is written in `Java` using `Selenide` framework.
 - `Allure Report` - for test results visualisation.  
 - `Telegram Bot` - for test results notifications.  
 - `Allure TestOps` - as Test Management System.
+  
 <a id="launch"></a>
 ## How to run
 <a id="local"></a>
@@ -59,13 +60,19 @@ Available feature test runs are:
 - search_tests
 
 Use the following command to run all tests:  
-```gradle clean test```  
+```
+gradle clean test
+```  
 or  
-```gradle clean test -Denv=local```  
+```
+gradle clean test -Denv=local
+```  
 <a id="remote"></a>
 ### Launch tests on your machine remotely
 Command with additional parameter `-Denv` should be used to run tests remotely :  
-```gradle clean test -Denv=remote```  
+```
+gradle clean test -Denv=remote
+```  
 
 All browser configurations are described in the `local.properties` and `remote.properties` files.  
 If needed configurations could be changed in those files.  
@@ -79,33 +86,46 @@ Properties file config explanation:
 
 <a id="jenkins"></a>
 ## Run in [Jenkins](https://jenkins.autotests.cloud/job/C22-kryastin-diplomaUI/)
+
 <img src="media/screenshots/Jenkins_common.png"/>
+
 Build with parameters allows to customize your test run: different browsers, window resolutions, etc.  
+
 <img src="media/screenshots/Jenkins_build.png"/>
 
 After the build is done the test results are available in `Allure-report` and `Allure TestOps`
+
 <a id="telegram"></a>
 ## Telegram Notifications
 Telegram bot sends a brief report to a specified telegram chat by results of each build.
+
 <img src="media/screenshots/Telegram_notif.png"/>
+
 <a id="allure-report"></a>
 ## Report in Allure Report
 Main page with common information  
+
 <img src="media/screenshots/AllureReport_common.png"/>
+
 List of tests with steps and test artefacts  
+
 <img src="media/screenshots/AllureReport_cases.png"/>
+
 <a id="allureTO"></a>
 ## Allure [TestOps Integration](https://allure.autotests.cloud/project/3925/dashboards)
 >Test-cases in the project are imported and constantly updated from the code, so there is no need in complex process of synchronization manual test-cases and autotests.  
 >It is enough to create and update an autotest in the code and the test-case in TMS always will be in actual state.  
 >Manual test-cases also can be added in TMS in case of need (via web interface or via code).
 ### Dashboard preview  
+
 <img src="media/screenshots/AllureTO_dashboard.png"/>  
 
 ### Test cases  
+
 <img src="media/screenshots/AllureTO_testcases.png"/>  
 
 ### Test runs  
+
 <img src="media/screenshots/AllureTO_launch.png"/>  
 
 <a id="video"></a>
