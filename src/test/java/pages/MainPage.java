@@ -21,8 +21,9 @@ public class MainPage {
 
     public MainPage openPage(){
         open(baseUrl);
-        return this;
-    }public MainPage checkSearchInput(){
+        return this;}
+
+    public MainPage checkSearchInput(){
         searchInput.shouldBe(visible);
         return this;
     }
@@ -84,10 +85,5 @@ public class MainPage {
         anyLanguageOption.click();
         return this;
     }
-
-
-
-
-
 
 }

@@ -17,7 +17,7 @@ public class SearchBarTests extends BaseTest {
     private SearchPage searchPage = new SearchPage();
 
     private static final String FREE_ENG_SEARCH_VALUE = "SQL Introduction";
-    private static final String FREE_RU_SEARCH_VALUE = "Английский. A1 уровень";
+    private static final String FREE_RU_SEARCH_VALUE = "Мемы в работе педагога";
 
 
     @Test
@@ -113,13 +113,13 @@ public class SearchBarTests extends BaseTest {
         step("Select free course checkbox", () -> {
             mainPage.selectFreeCheckBox();
         });
-        step("Select Russian language", () -> {
-            mainPage.selectRuCourseLanguage();
-        });
         step("Set search value", () -> {
             mainPage.setSearch(FREE_RU_SEARCH_VALUE);
         });
-        step("Click on the search button", () -> {
+        step("Select Russian language", () -> {
+            mainPage.selectRuCourseLanguage();
+        });
+        step("Verify course title", () -> {
             searchPage.checkCourseCardTitle(FREE_RU_SEARCH_VALUE);
         });
     }

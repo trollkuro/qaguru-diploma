@@ -48,7 +48,7 @@ public class AuthModalWindowTests extends BaseTest{
         step("Click on Sign in button", () -> {
             header.clickOnRegistrationButton();
         });
-        step("Verify login inputs", () -> {
+        step("Verify registration inputs", () -> {
             authModalWindow.modalWindowWithRegistrationIsDisplayed();
         });
     }
