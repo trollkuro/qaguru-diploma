@@ -25,17 +25,17 @@ The project consists of UI tests. A brief list of interesting facts:
 - [x] Run tests by `Tags` or all at once
 <a id="tools"></a>
 ## Tools and Technologies
-<a href="https://www.java.com/en/"><img src="media/logo/Java_logo.png" width="90"/></a>
-<a href="https://gradle.org/"><img src="media/logo/Gradle.png" width="90"/></a>
-<a href="https://github.com/"><img src="media/logo/GitHub.png" width="90"/></a>
-<a href="https://www.jetbrains.com/idea/"><img src="media/logo/IntelliJ_IDEA.png" width="90"></a>
-<a href="https://junit.org/junit5/"><img src="media/logo/JUnit5.png" width="90"/></a>
-<a href="https://selenide.org/"><img src="media/logo/Selenide.png" width="90"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="media/logo/Selenoid.png" width="90"/></a>
-<a href="https://www.jenkins.io/"><img src="media/logo/Jenkins.png" width="90"/></a>
-<a href="https://github.com/allure-framework/"><img src="media/logo/AllureReports.png" width="90"/></a>
-<a href="https://qameta.io/"><img src="media/logo/AllureTestOps.svg" width="90"/></a>
-<a href="https://telegram.org/"><img src="media/logo/Telegram.png" width="90"/></a>
+<a href="https://www.java.com/en/"><img src="media/logo/Java_logo.png" width="60"/></a>
+<a href="https://gradle.org/"><img src="media/logo/Gradle.png" width="60"/></a>
+<a href="https://github.com/"><img src="media/logo/GitHub.png" width="60"/></a>
+<a href="https://www.jetbrains.com/idea/"><img src="media/logo/IntelliJ_IDEA.png" width="60"></a>
+<a href="https://junit.org/junit5/"><img src="media/logo/JUnit5.png" width="60"/></a>
+<a href="https://selenide.org/"><img src="media/logo/Selenide.png" width="60"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="media/logo/Selenoid.png" width="60"/></a>
+<a href="https://www.jenkins.io/"><img src="media/logo/Jenkins.png" width="60"/></a>
+<a href="https://github.com/allure-framework/"><img src="media/logo/AllureReports.png" width="60"/></a>
+<a href="https://qameta.io/"><img src="media/logo/AllureTestOps.svg" width="60"/></a>
+<a href="https://telegram.org/"><img src="media/logo/Telegram.png" width="60"/></a>
 
 The project is written in `Java` using `Selenide` framework.  
 - `Gradle` - is used as a build automation tool.  
