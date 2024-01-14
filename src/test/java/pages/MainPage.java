@@ -1,6 +1,8 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import pages.components.AuthModalWindow;
+import pages.components.Header;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
@@ -13,37 +15,39 @@ public class MainPage {
                             courseLanguageDropDown = $(".select-box__toggle-btn"),
                             engLanguageOption = $(withText("На английском")),
                             ruLanguageOption = $(withText("На русском")),
-                            anyLanguageOption = $(withText("На любом языке")),
                             certificateCheckBox = $x("//span[text()='С сертификатами']"),
                             freeCheckBox = $x("//span[text()='Бесплатные']"),
                             searchButton = $(".search-form__submit");
+
+    public AuthModalWindow authModalWindow = new AuthModalWindow();
+    public Header header = new Header();
 
 
     public MainPage openPage(){
         open(baseUrl);
         return this;}
 
-    public MainPage checkSearchInput(){
+    public MainPage checkVisibilitySearchInput(){
         searchInput.shouldBe(visible);
         return this;
     }
 
-    public MainPage checkCourseLanguageDropDown(){
+    public MainPage checkVisibilityCourseLanguageDropDown(){
         courseLanguageDropDown.shouldBe(visible);
         return this;
     }
 
-    public MainPage certificateCheckBox(){
+    public MainPage checkVisibilityCertificateCheckBox(){
         certificateCheckBox.shouldBe(visible);
         return this;
     }
 
-    public MainPage checkFreeCheckBox(){
+    public MainPage checkVisibilityFreeCheckBox(){
         freeCheckBox.shouldBe(visible);
         return this;
     }
 
-    public MainPage checkSearchButton(){
+    public MainPage checkVisibilitySearchButton(){
         searchButton.shouldBe(visible);
         return this;
     }
@@ -53,10 +57,6 @@ public class MainPage {
         return this;
     }
 
-    public MainPage selectCertificateCheckBox(){
-        certificateCheckBox.click();
-        return this;
-    }
 
     public MainPage selectFreeCheckBox(){
         freeCheckBox.click();
@@ -77,12 +77,6 @@ public class MainPage {
     public MainPage selectRuCourseLanguage(){
         courseLanguageDropDown.click();
         ruLanguageOption.click();
-        return this;
-    }
-
-    public MainPage selectAnyCourseLanguage(){
-        courseLanguageDropDown.click();
-        anyLanguageOption.click();
         return this;
     }
 

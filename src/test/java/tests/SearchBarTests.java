@@ -30,11 +30,11 @@ public class SearchBarTests extends BaseTest {
             mainPage.openPage();
         });
         step("Verify search bar elements in the main page", () -> {
-            mainPage.checkSearchInput()
-                    .checkCourseLanguageDropDown()
-                    .certificateCheckBox()
-                    .checkFreeCheckBox()
-                    .checkSearchButton();
+            mainPage.checkVisibilitySearchInput()
+                    .checkVisibilityCourseLanguageDropDown()
+                    .checkVisibilityCertificateCheckBox()
+                    .checkVisibilityFreeCheckBox()
+                    .checkVisibilitySearchButton();
         });
     }
 

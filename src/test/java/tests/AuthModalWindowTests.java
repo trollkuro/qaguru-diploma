@@ -1,8 +1,7 @@
 package tests;
 
 import pages.MainPage;
-import pages.components.AuthModalWindow;
-import pages.components.Header;
+
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -11,12 +10,11 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+
 @DisplayName("AuthModalWindow")
 public class AuthModalWindowTests extends BaseTest{
 
-    private Header header = new Header();
     private MainPage mainPage = new MainPage();
-    private AuthModalWindow authModalWindow = new AuthModalWindow();
 
 
     @Test
@@ -29,10 +27,10 @@ public class AuthModalWindowTests extends BaseTest{
             mainPage.openPage();
         });
         step("Click on Sign in button", () -> {
-            header.clickOnLoginButton();
+            mainPage.header.clickOnLoginButton();
         });
         step("Verify login inputs", () -> {
-            authModalWindow.modalWindowWithLoginIsDisplayed();
+            mainPage.authModalWindow.modalWindowWithLoginIsDisplayed();
         });
     }
 
@@ -46,10 +44,10 @@ public class AuthModalWindowTests extends BaseTest{
             mainPage.openPage();
         });
         step("Click on Sign in button", () -> {
-            header.clickOnRegistrationButton();
+            mainPage.header.clickOnRegistrationButton();
         });
         step("Verify registration inputs", () -> {
-            authModalWindow.modalWindowWithRegistrationIsDisplayed();
+            mainPage.authModalWindow.modalWindowWithRegistrationIsDisplayed();
         });
     }
 
@@ -63,13 +61,13 @@ public class AuthModalWindowTests extends BaseTest{
             mainPage.openPage();
         });
         step("Click on Sign in button", () -> {
-            header.clickOnRegistrationButton();
+            mainPage.header.clickOnRegistrationButton();
         });
         step("Close modal window", () -> {
-            authModalWindow.closeModalWindow();
+            mainPage.authModalWindow.closeModalWindow();
         });
         step("Verify that modal window is closed", () -> {
-            authModalWindow.modalWindowIsClosed();
+            mainPage.authModalWindow.modalWindowIsClosed();
         });
     }
 }

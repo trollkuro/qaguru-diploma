@@ -17,9 +17,8 @@ import java.util.stream.Stream;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Localisation")
-public class LocalisationTests extends BaseTest {
+public class LocalizationTests extends BaseTest {
 
-    private Header header = new Header();
     private MainPage mainPage = new MainPage();
 
     private static final List<String> LANGUAGES = List.of("Беларуская", "Deutsch", "English", "Español",
@@ -48,10 +47,10 @@ public class LocalisationTests extends BaseTest {
             mainPage.openPage();
         });
         step("Click on the language selector", () -> {
-            header.clickOnLanguageDropDown();
+            mainPage.header.clickOnLanguageDropDown();
         });
         step("Verify available languages", () -> {
-            header.checkAvailableLanguages(expectedLanguages);
+            mainPage.header.checkAvailableLanguages(expectedLanguages);
         });
     }
 
@@ -79,13 +78,13 @@ public class LocalisationTests extends BaseTest {
             mainPage.openPage();
         });
         step("Click on the language selector", () -> {
-            header.clickOnLanguageDropDown();
+            mainPage.header.clickOnLanguageDropDown();
         });
         step("Select language", () -> {
-            header.selectLanguage(languages);
+            mainPage.header.selectLanguage(languages);
         });
         step("Verify translation of auth buttons in the header", () -> {
-            header.checkAuthButtonsTranslations(expectedAuthButtons);
+            mainPage.header.checkAuthButtonsTranslations(expectedAuthButtons);
         });
     }
 }

@@ -52,7 +52,7 @@ The project is written in `Java` using `Selenide` framework.
 ### Launch tests on your machine locally
 > [!IMPORTANT]
 > Be sure you have installed Java, Gradle, Inteliji Idea and have had Chrome as browser
->
+
 Tests are divided by different features, it is possible to run not only all tests but also by feature tags.  
 Available feature test runs are:
 - auth_modal_tests
@@ -102,7 +102,7 @@ Telegram bot sends a brief report to a specified telegram chat by results of eac
 <img src="media/screenshots/Telegram_notif.png"/>
 
 <a id="allure-report"></a>
-## Report in Allure Report
+## Report in [Allure Report](https://jenkins.autotests.cloud/job/C22-kryastin-diplomaUI/allure/)
 Main page with common information  
 
 <img src="media/screenshots/AllureReport_common.png"/>
